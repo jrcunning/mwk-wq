@@ -184,14 +184,7 @@ Two sets of analyses were performed. The first set was a descriptive statistics 
 
 ```{r import_data}
 # Import data
-df0 <- read_csv("FTL_data_master_2021-2022.csv") %>%
-  clean_names() %>%
-  mutate(sample_date = as_date(sample_date),
-         year = year(sample_date),
-         month = month(sample_date),
-         across(where(is_character), as_factor))
-
-df <- read_csv("FTL_data_master_2021-2023.csv") %>%
+df <- read_csv("data/FTL_data_master_2021-2023.csv") %>%
   clean_names() %>%
   mutate(sample_date = as_date(sample_date),
          year = year(sample_date),
@@ -238,8 +231,8 @@ exceed_by_year <- df %>%
 
 # Print summary table of exceedances by year, and overall
 exceed_table <- bind_rows(exceed_by_year, exceed_overall) %>% 
-  pivot_wider(names_from = year, values_from = 3:7, names_sort = TRUE) %>%
-  relocate(c(1,2,5,8,11,14,3,6,9,12,15,4,7,10,13,16))
+  pivot_wider(names_from = year, values_from = 3:7)
+# Columns can be custom sorted to whatever order is preferred using 'relocate' function
 
 exceed_table %>% 
   mutate(across(starts_with("pct"), scales::percent, accuracy = 1)) %>%
@@ -328,7 +321,7 @@ mpn_by_year_season <- df %>%
 # Print summary table of mpn by site, season, and year
 bind_rows(mpn, mpn_by_season, mpn_by_year, mpn_by_year_season) %>%
   pivot_wider(names_from = year, values_from = c(n, MPN, SD)) %>%
-  relocate(c(1,2,4,7,10,5,8,11,3,6,9)) %>%
+  # Columns can be custom sorted to whatever order is preferred using 'relocate' function
   arrange(sample_site, season) %>%
   knitr::kable(digits = 0, caption = "Table 4. Average FIB concentrations by Dry/Wet season for samples collected in 2021, 2022, and over both years. Cells highlighted in red indicate that the FIB concentration exceeded the DOH threshold of 70 MPN.")
 ```
