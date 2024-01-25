@@ -1,0 +1,494 @@
+---
+title: "Waterway Quality Monitoring Report to the City of Fort Lauderdale: Year 2"
+subtitle: "Example Report Using RMarkdown"
+author: "R. Cunning for Miami Waterkeeper"
+date: "1/18/2024"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, message = FALSE, warning = FALSE)
+```
+
+```{r}
+library(tidyverse)
+library(janitor)
+library(lubridate)
+library(emmeans)
+```
+
+## EXECUTIVE SUMMARY
+  Miami Waterkeeper was contracted by the City of Fort Lauderdale to conduct waterway quality monitoring at ten high-value recreational sites for the last two years (January 2021- December 2022). The data is rapidly made available to the residents and visitors of the City of Fort Lauderdale through the online app -Swim Guide, social media and the Miami Waterkeeper website so they can make informed decisions about the potential health risks of the water within recreational areas.  
+  
+  Fecal indicator bacteria (FIB), including enterococci, are measured in water bodies to determine whether there are potential pathogens present that may be harmful to human health. High amounts of enterococci at a site can indicate a nearby source of FIB (from stormwater runoff, septic tanks, sewage leaks, etc). Enterococci can come from various fecal sources, including human sewage, dogs, birds, wildlife, etc. While enterococci is an excellent metric for health-related waterway quality, its presence is more like a symptom of a deeper issue, which is why monitoring it is vital. When the enterococci levels exceed a certain threshold (70+ CPU/MPN per 100 mL), the Florida Department of Health (DOH) advises that contact with the water may pose an increased health risk.  
+  
+  The data collected from two years of waterway quality monitoring around the City of Fort Lauderdale has allowed us to better understand the water quality trends at each site. Annually, 39% of the weekly samples we collected had exceeded the DOH recommended threshold for safe recreational usage. Of the ten sites, four sites stood out as locations with persistent water quality issues, including Sweeting Park, Himmarshee Canal, Tarpon River, and Annie Beck Park.  
+  
+* Samples from Sweeting Park have consistently exceeded the standard about 97% of the time and has shown no improvements in water quality since 2021. Monitoring has allowed us to measure this trend, but the FIB source is unclear. The City has conducted smoke testing in the North Fork basin to identify potential leaks in the sanitary sewer system. However, a homeless encampment nearby continues to be a potential source of concern as well as abundant wildlife. Further investigation is recommended. While the compliance rate with the highly conservative FDOH standard has not improved, the number of exceedances over 1000 MPN has been reduced from 10 incidences in 2021 to half that in 2022. While this does not speak to potential impacts to human health, it does address potential source reduction in inputs over time.  
+
+* There was a reduction in the number of exceedances at Himmarshee Canal and Tarpon River. The average enterococci concentration has been increasing over time in the Himmarshee Canal and decreasing at Tarpon River. The source of the enterococci could be potentially related to stormwater discharge or infrastructure malfunctions, but further investigation is recommended. Monitoring these sites during waterway quality improvement initiatives, like dredging, is crucial to capture quantifiable changes in FIB as a metric of efficacy.  
+
+* Annie Beck Park has shown an increasing trend in enterococci concentrations over the last 2 years. Monitoring has allowed us to identify this increasing trend. A leaking sewer pipe under a nearby bridge was identified in late December, 2022 which may have contributed to the increased bacterial count at Annie Beck prior to its repair. Further investigation is recommended to ensure efficacy of infrastructure repairs.  
+
+
+## HIGHLIGHTS FROM TWO YEARS OF WATER QUALITY MONITORING (2021 - 2022)
+
+*All metrics below exclude the resample and replicate collections, unless noted otherwise.* 
+
+* 1,008 total water samples were collected and analyzed (500 in 2021, 508 in 2022) for FIB, dissolved oxygen, temperature, salinity, turbidity, and chlorophyll a  
+    + 1,639 total water samples were collected and analyzed when including resamples and replicates  
+    
+* 399 samples were in exceedance of the DOH recommended FIB threshold for public recreation, out of 1,008 collected samples or 39% annually, (200 in 2021, 199 in 2022)  
+    + Recreational area with most exceedances: Sweeting Park (Passed 3% of the time)  
+    + Recreational area with least exceedances: Sunrise Bay Hugh Birch Park (Passed
+95% of the time)  
+
+* There were 22,161 total Swim Guide views at City of Fort Lauderdale-sponsored
+locations (11,509 in 2021, 10,652 in 2022)  
+    + Recreational area with the most views: Annie Beck Park  
+    + Recreational area with the least views: Royal Palm Drive/Las Olas Blvd  
+    
+* Three sites stood out as having excellent water quality:  
+    + Sunrise Bay /Hugh Taylor Birch State Park (Passed 95% of the time)  
+    + Lake Sylvia (Passed 91% of the time )  
+    + Sandbar at SE 10th Street (Passed 86% of the time)  
+    
+* Four sites stood out as having consistently poor water quality, according to the DOH  
+recommended FIB threshold for public recreation:  
+    + New River North Fork at Sweeting Park (97% exceedance)  
+    + Himmarshee Canal (83% exceedance)  
+    + Tarpon River at Rio Vista Boulevard (60% exceedance)  
+    + Annie Beck Park (47% exceedance)  
+    
+## INTRODUCTION
+  Visiting a beach or waterway is the number one activity of Florida's tourists, undeniably the biggest draw for the state’s $112 billion annual tourism revenue. Almost half a million people are directly employed in Florida’s ocean economy. Florida's tourism industry, job market, recreation, environment, and even Florida's culture depends on having clean waterways.  
+  
+  South Florida’s waterways are also particularly vulnerable to pollution because of our low elevation, porous limestone geology, aging infrastructure, and the threat of sea-level rise. Without clean waterways, our ocean economy, job market, recreation, environment, and culture are all at risk. If we don’t protect our waterways, we risk jeopardizing our coastal community and environment for all future generations.  
+    
+  The City of Fort Lauderdale hosts a thriving community fueled by tourism, recreation, and real estate. The recreational use of waterways is valuable to the Fort Lauderdale community; however, despite its importance to the community, relatively little data about waterway quality was readily available to the residents or visitors who use the waterways for recreation. While the Florida Department of Health (DOH) monitors for Fecal Indicator Bacteria (FIB), the data is hard to find and only focuses on beaches rather than inland waterways such as canals, rivers, or lakes. While there is a higher potential for ingestion of the bacteria while swimming at the beach, the canals and rivers are often used by residents and visitors who enjoy kayaking, paddle boarding, canoeing, and other recreational watersports.  
+    
+  Miami Waterkeeper has addressed these gaps over the last two years through a contract with the City of Fort Lauderdale. Our weekly waterway quality monitoring program emulates the DOH methodology and frequency for ten inland waterways for which publicly accessible waterway quality data is a necessity. Miami Waterkeeper makes the FIB data available to the public as soon as it is available, along with the DOH data, through the Swim Guide app and social media so that residents and visitors can make informed decisions before interacting with the inland waterways in the City of Fort Lauderdale.  
+    
+  Waterway quality issues may seriously impact the health of those who come in contact with recreational water. It is important to many concerned residents and visitors of the City of Fort Lauderdale to have access to relevant waterway quality data to ensure they are informed about potential health risks before interacting with the water at recreational areas. Waterway quality threats, including Sanitary Sewage Overflows (SSOs) which can cause temporary FIB impairments, are being addressed by the City of Fort Lauderdale and have been reduced over the last few years due to the infrastructure investments.  
+    
+  With information about waterway quality from the same locations taken over time, we can gather baseline data about conditions and inform the public about changes in waterway quality. This report summarizes data collected during two years of weekly sampling at ten sites in the City of Fort Lauderdale.  
+    
+## ABOUT MIAMI WATERKEEPER
+
+  As a Miami-based non-profit organization, Miami Waterkeeper is dedicated to protecting South Florida’s coastal waters and the surrounding watershed. Launched in 2010, Miami Waterkeeper has become a leading advocate for clean water, inspiring a movement of empowered citizens dedicated to achieving swimmable, drinkable, fishable water. Often tackling issues on multiple fronts, we address environmental, social, and policy water issues using community outreach, scientific research, and civic and legal action.  
+    
+  Miami Waterkeeper defends the public’s right to use and enjoy clean water by focusing on clean water, ecosystem protection, and sea-level rise readiness in South Florida.  
+    
+  Miami Waterkeeper’s jurisdiction spans a watershed that serves more than five (5) million people across Miami-Dade and Broward counties and encompasses the mid-section of the Florida Reef Tract. As part of our science and research platform, our water quality monitoring program samples 27 locations weekly in Miami-Dade and Broward Counties to determine the level of the fecal indicator bacteria (FIB) enterococci and the safety of the waterways for swimming or other activities and immediately share the results with the public.  
+    
+## ABOUT THIS PROGRAM
+
+  The City of Fort Lauderdale initially contracted with Miami Waterkeeper on November 13, 2020, to expand waterway quality monitoring to inland waterways, focusing on areas of high recreational value. The annual contract was renewed to include sampling throughout 2022, and we are currently in the process of renewing a multi-year contract.  
+  
+  At the ten weekly sampling sites, samples for the analysis of the fecal indicator bacteria (FIB) enterococci were collected, along with parameters such as dissolved oxygen (DO), chlorophyll a, salinity, turbidity, and temperature. Sample collection, processing, and analyses were performed under protocols similar to that of the Florida Department of Health (DOH)’s Florida Healthy Beaches Program. The DOH sets the threshold of FIB at 70 MPN for public recreation; levels greater than 70 MPN indicate possible risks to human health. Miami Waterkeeper collected samples from an exceeding site a second time in the same week, referred to as a "resample."  
+  
+The aims of the contract were to:  
+
+* Provide weekly waterway quality monitoring at ten City of Fort Lauderdale sites 
+
+* Provide a baseline understanding of FIB in local waterways  
+
+* Inform the local community about waterway quality monitoring results
+
+Per our original proposal, we conducted the following waterway quality monitoring tasks:
+
+1. Weekly sampling at four designated Watersport Activity Areas and six outside Designated Wastersports Activity Areas or of general interest.  
+
+2. Swim Guide app development and City of Fort Lauderdale Banner Ads  
+
+  We publish our weekly waterway quality testing information along with the water quality testing information produced by the state DOH for Broward County beaches via the Swim Guide Application, our social media channels, and on our website www.miamiwaterkeeper.org/water_monitoring. Numeric data are also available for the public to download on our website.  
+  
+  The Swim Guide app is available on both web and mobile devices. The app had 22,161 views from January 2021- December 2022, at the City of Fort Lauderdale sponsored sites (10,652 in 2022).  
+  
+  The app utilizes an easy-to-read format, with green indicating good water quality (0-70 CFU/MPN enterococci per 100 mL sample) and red indicating poor water quality (71+ CFU/MPN enterococci per 100 mL sample). Historical data is also accessible. All of our weekly monitoring sites and the most recent results are available to the public for easy access.  
+  
+  A banner ad is included on the Swim Guide pages of the funded sites The City of Fort Lauderdale’s banner ads have been featured on the pages for all ten Fort Lauderdale sites since January 2021.  
+  
+*Site Descriptions:*
+
+Ten locations in the City of Fort Lauderdale were selected in coordination with the Public Works Department (Figure 1). These included:
+
+Annie Beck Park is approximately 2.4 acres in the Victoria Park neighborhood. It is next to the Rio Navarro canal. It offers amenities like nature trails, open areas, and a waterfront suitable for kayak launching. Slow flow, organic film/biofilm on the water’s surface, and floating leaves and vegetation are frequently noted at this site.
+
+Coontie Hatchee Park (South Fork of the New River)is approximately 2.6 acres along the South Fork of the New River and has amenities such as a kayak/canoe launch, waterfront views, bicycle racks, fitness trail with stations, picnic tables, and pavilions. Foam on the water’s surface, floating vegetation, and some trash are noted at this site.
+
+Himmarshee Canal was a tributary of the New River, historically a major artery in and out of the Everglades. The word translates to “new water” or “new river.” The Himmarshee Canal now starts near US1/Federal Highway and traverses the neighborhoods of Colee Hammock and Beverly Heights as it flows under Las Olas Blvd and out to the New River. Floating vegetation, foam/organic film on the water’s surface, and slow flow are frequently noted at this site.
+
+Lake Sylvia (Designated Watersports Activity Area) is suitable for water skiing, tubing, kneeboarding, and wakeboarding. Lake Sylvia is within the Harbor Beach neighborhood. Water is often noted as clear.
+Middle River at George English Park (Designated Watersports Activity Area) is suitable for water skiing, tubing, kneeboarding, and wakeboarding. George English Park is approximately 19.7 acres and offers such amenities as kayaking, paddle boarding, fishing, boat access/ramp, and walking/jogging trails. Water is often noted as clear.
+
+Royal Palm Drive at Las Olas Boulevard is within the Nurmi Isles neighborhood north of Las Olas Blvd. A smell of sewage is occasionally noted at this site but is inconsistent. Water is often noted as clear with occasional floating vegetation.
+
+Sand Bar (Designated Watersports Activity Area) at SE 10th Street is suitable for water skiing, tubing, kneeboarding, and wakeboarding. It is also a popular area for boaters to moor and enjoy the water. Water is often noted as clear.
+
+Sunrise Bay at Hugh Taylor Birch State Park (Designated Watersports Activity Area) is suitable for water skiing, tubing, kneeboarding, and wakeboarding. Sunrise Bay is within the Coral Ridge neighborhood and is adjacent to Hugh Taylor Birch State Park. Hugh Taylor Birch is the city’s own "Central Park," complete with gopher tortoises and boat access from the Intracoastal waterway. Water is observed to be brown with occasional floating vegetation.
+
+Sweeting Park (North Fork of the New River) is approximately 0.3 acres along the North Fork of the New River and has amenities such as fishing, a dock, and park benches. The site has slow- moving water, frequently has biofilm or other organic material on the surface along with vegetation, and the river floor appears to be silty with fine sediment particles under normal conditions.
+
+Tarpon River at Rio Vista Boulevard intersects with the New River at two locations, SW 8th Ave and Ponce De Leon Drive. The Tarpon River traverses the neighborhoods of Tarpon River, Downtown Fort Lauderdale, and Rio Vista. Along the way, at SW 11th Street, is the Tarpon Cove Park, with amenities such as fishing and water frontage. Floating vegetation, brown water, foam/biofilm on the surface, and construction has been noted at this site.
+
+## METHODS
+
+This monitoring program implements Miami Waterkeeper's fecal indicator bacteria (FIB) monitoring protocols to include ten sites of high recreational value in the City of Fort Lauderdale. Sample collection occurs weekly, along with resampling and reanalysis, when the threshold of 70 MPN is exceeded.
+
+Miami Waterkeeper uses the IDEXX system for routine sampling collection and enumeration of the FIB enterococci present in water quality samples. The IDEXX system only presents results as whole numbers. Prior to collecting samples, precautions are taken to ensure that sampling bottles are sterile; this includes using an autoclave to sanitize the bottles of any bacteria or impurities with heat and pressure. Gloves are always used when handling the samples so they do not become contaminated with bacteria. Samples are collected approximately 6-12 inches below the surface to best capture conditions where recreational activities take place. The samples were collected without making contact with the bottom or stirring up sediment. Samples were collected facing the oncoming current so as not to contaminate the sample with the sample collector’s bacteria or sediment put into suspension. Samples are immediately (within 15 min of collection) placed on ice for preservation.
+
+IDEXX trays containing the water sample and the IDEXX enterolert reagent are placed in an incubator for 24-28 hours and then analyzed under UV light for the Most Probable Number (MPN).
+
+Sample collection, processing, and analysis protocols are based on the EPA Method 1600 protocol and the Florida Department of Health (DOH) standards for enterococci. The field technicians include recent graduates and students from local universities who are trained in collecting field samples, sample processing, and laboratory analyses.
+
+*Enterococci Criteria*
+
+The following are the EPA-recommended enterococci thresholds that the DOH uses to determine quality of the water.
+
+* 0-35 MPN/CFU enterococci per 100 mL sample: Good
+* 36 – 70 MPN/CFU enterococci per 100 mL sample: Moderate
+* 71+ MPN/CFU enterococci per 100 mL sample: Poor
+
+Swim Guide utilizes an easy-to-read format, with green indicating “good” water quality and red indicating “poor” water quality. Enterococci results that fall within the “moderate” range are reported as “good” on Swim Guide.
+
+
+*Field Collections and Sample Handling Quality Control*
+
+With each sampling batch, a site is selected at random to be collected a second time as a field replicate. The results are analyzed to evaluate the field collection and sample handling techniques. Field technicians are audited in the first month of independent sampling. After the initial audit, they are then audited every six months. Technicians may also be randomly audited at any time. Images of the site are also taken with each sample.
+
+In 2022, we implemented a new quality control measure that allows the laboratory staff to verify that samples were appropriately preserved on ice throughout the sampling process (under 6°C). This is accomplished using a Temperature control bottle, which is placed in each cooler at the beginning of the sampling process and then measured with a thermometer when the field technicians reach the lab.
+
+*Laboratory Quality Control*
+
+With each analytical batch, a sample selected at random is collected and analyzed in duplicate. Every batch also includes a laboratory blank, which is analyzed to evaluate the aseptic technique, laboratory sanitation practices, and laboratory equipment's sterility. Laboratory technicians are audited in the first month of independent analysis. After the initial audit, they are then audited every six months. Technicians may also be randomly audited at any time. Images of each IDEXX tray are also taken when samples are under UV light and analyzed.
+
+*Environmental Data*
+
+We also collected waterway quality data on environmental conditions at the time of samplings, such as weather, tide, temperature, and rainfall. Our field technicians make weather observations on site, determining whether conditions at the time of sample collections are sunny, cloudy, or rainy; we also determine the direction of the current (right to left, left to right, straight toward, or still). Our wind speed and air temperature data are taken from the NavClock app, which pulls from National Oceanic and Atmospheric Administration (NOAA) weather sites. Rainfall and tide are taken from the NOAA National Centers for Environmental Information (NCEI) database.
+
+*Documentation and Data Management*
+
+Data is recorded on a data sheet and then entered manually into a master spreadsheet housed on Google Drive by a technician. All data entered is audited and analyzed by the Water Quality Research Manager for quality assurance and accuracy. Scans of the data sheets and images from the field and laboratory quality control protocols are stored in Google Drive. After samples are analyzed, the Water Quality Research Manager reviews and then publishes the exceedance results on Swim Guide.
+
+*Methods for Analysis*
+
+Two sets of analyses were performed. The first set was a descriptive statistics evaluation of the entire period of study for the ten City of Fort Lauderdale sites. Then an ANOVA and linear regression model were performed from the time period of the contract with the City of Fort Lauderdale.
+
+## RESULTS
+
+*Swim Guide Metrics*
+
+
+*Water Quality Results*
+
+```{r import_data}
+# Import data
+df0 <- read_csv("FTL_data_master_2021-2022.csv") %>%
+  clean_names() %>%
+  mutate(sample_date = as_date(sample_date),
+         year = year(sample_date),
+         month = month(sample_date),
+         across(where(is_character), as_factor))
+
+df <- read_csv("FTL_data_master_2021-2023.csv") %>%
+  clean_names() %>%
+  mutate(sample_date = as_date(sample_date),
+         year = year(sample_date),
+         month = month(sample_date),
+         across(where(is_character), as_factor))
+```
+
+Since the initiation of this monitoring program, Miami Waterkeeper has collected and analyzed 1,008 water samples (1,639 when including the 631 resamples/replicate samples), with the support of the City. Of that, 508 samples were collected in 2022 (817 when including the 309 resamples/replicates) and 500 samples were collected in 2021 (822 when including the 322 resamples/replicates).
+
+The four key sites of poor waterway quality that were identified in 2021 are still indicating poor water quality: Annie Beck Park, Sweeting Park, Himmarshee Canal, and Tarpon River.
+
+*Comparison by Exceedances*
+
+All results below exclude the resamples and replicates collections. The timeframe is from January 13, 2021-December 27, 2022. Due to sampling inconsistencies that resulted from Hurricane Ian, the data collected on September 29, 2022 were excluded from the analysis.
+
+In 2022, at all sites, 39% of water quality samples collected were in exceedance of the DOH threshold for enterococci (70 MPN); this is a slight improvement in the overall total percent of exceedances compared to 2021, which was 40% (Table 2, Figure 2).
+
+During 2022, the site with the most exceedances was Sweeting Park (96%), which had a slightly lower percentage of exceedances in 2022 than in 2021 (-2%) (Table 2, Figure 3). Himmarshee Canal (-12%), Tarpon River (-11%), Coontie Hatchee Park (-3%), Lake Sylvia (-2%), and Royal Palm Drive Las Olas Blvd (-6%) had fewer exceedances in 2022 than in 2021. Annie Beck Park (+13%), Middle River George English Park (+4%), Sunrise Bay Hugh Taylor Birch Park (+6%), and Sandbar (+4%) all showed a higher number of exceedances in 2022 than in 2021.
+
+```{r exceedances_by_year_table}
+df <- df %>%
+  mutate(doh_exceed = if_else(mpn > 70, TRUE, FALSE),
+         dep_exceed = if_else(mpn > 130, TRUE, FALSE))
+
+# Exceedances overall
+exceed_overall <- df %>% 
+  group_by(sample_site) %>%
+  summarize(n_samples = n(),
+            n_ex_doh = sum(doh_exceed),
+            pct_ex_doh = sum(doh_exceed) / n(),
+            n_ex_dep = sum(dep_exceed),
+            pct_ex_dep = sum(dep_exceed) / n()) %>%
+  mutate(year = "all")
+
+### Exceedances by year
+exceed_by_year <- df %>% 
+  group_by(sample_site, year) %>%
+  summarize(n_samples = n(),
+            n_ex_doh = sum(doh_exceed),
+            pct_ex_doh = sum(doh_exceed) / n(),
+            n_ex_dep = sum(dep_exceed),
+            pct_ex_dep = sum(dep_exceed) / n()) %>%
+  mutate(year = as.character(year))
+
+# Print summary table of exceedances by year, and overall
+exceed_table <- bind_rows(exceed_by_year, exceed_overall) %>% 
+  pivot_wider(names_from = year, values_from = 3:7, names_sort = TRUE) %>%
+  relocate(c(1,2,5,8,11,14,3,6,9,12,15,4,7,10,13,16))
+
+exceed_table %>% 
+  mutate(across(starts_with("pct"), scales::percent, accuracy = 1)) %>%
+  knitr::kable(caption = "Table 2. The total number of samples collected and exceeded in weekly water quality monitoring in the City of Fort Lauderdale. Exceedances are presented for both the DOH recommended threshold for enterococci (>70 MPN) and the DEP threshold for enterococci (>130 MPN) (*Two samples were not collected due to inaccessibility at Sunrise Bay Hugh Taylor Birch Park.)")
+```
+
+```{r exceedances_by_year_plot, fig.width = 10, fig.cap = "Figure 2. Total number of exceedances by year for samples collected from 2021 (January 2021-December 2021) and 2022 (January 2021-December 2022)."}
+# Plot exceedances by year
+ggplot(exceed_by_year, aes(x = year, fill = year, y = pct_ex_doh)) +
+  facet_wrap(~sample_site, nrow = 1) +
+  geom_col() +
+  theme(legend.position = "bottom", axis.text.x = element_blank()) +
+  labs(x = "", y = "Percentage of Exceedances (DOH)")
+```
+
+Some of the sites showed a higher percentage of exceedances during the wet season vs the dry season, except for Lake Sylvia, Royal Palm Drive Las Olas Blvd, Sunrise Bay Hugh Taylor Birch Park and Sandbar, which showed a slightly lower percentage of exceedance in the wet season (Table 3, Figure 3).
+
+```{r exceedances_by_season_table}
+# Exceedances by season
+exceed_by_season <- df %>% 
+  group_by(sample_site, season) %>%
+  summarize(n_samples = n(),
+            n_ex_doh = sum(doh_exceed),
+            pct_ex_doh = sum(doh_exceed) / n(),
+            n_ex_dep = sum(dep_exceed),
+            pct_ex_dep = sum(dep_exceed) / n()) %>%
+  mutate(year = "all")
+
+# Print summary table of exceedances by season
+exceed_by_season %>% 
+  mutate(across(starts_with("pct"), scales::percent, accuracy = 1)) %>%
+  knitr::kable(caption = "Table 3. Total number of exceedances by Dry/Wet Season for samples collected from 2021-2022")
+```
+
+```{r exceedances_by_season_plot, fig.width = 10, fig.cap = "Figure 3. Percentage of exceedances by season for samples collected in the Dry Season (November 1 -May 14th) and the Wet Season (May 15th – October 31st)"}
+# Plot exceedances by season
+ggplot(exceed_by_season, aes(x = season, fill = season, y = pct_ex_doh)) +
+  facet_wrap(~sample_site, nrow = 1) +
+  geom_col() +
+  scale_fill_manual(values = c("lightblue3", "darkgreen")) +
+  theme(legend.position = "bottom", axis.text.x = element_blank()) +
+  labs(x = "", y = "Percentage of Exceedances (DOH)")
+```
+
+*Comparison by Concentration of MPN*
+
+The average enterococci concentration across all samples at all sites was 251 ± 1159 MPN (Table 4). The highest concentrations for the total, wet season, and dry season samples collected in 2022 were at Himmarshee Canal (1272 ± 3904 MPN), which is more than last year’s concentrations (363 ± 654 MPN). The second-highest readings in 2022 were collected at Sweeting Park (703 ± 1696 MPN). In 2021, the highest concentrations were found at Sweeting Park (601 ± 1391 MPN), followed by Tarpon River (463 ± 1353 MPN).
+
+Enterococci levels were not significantly different from 2021 to 2022 at any of the sites. Enterococci levels were also not significantly different between wet season and dry season.
+
+```{r mpn_by_site_table}
+# Average MPN by site
+mpn <- df %>%
+  group_by(sample_site) %>%
+  summarize(n = n(),
+            MPN = mean(mpn),
+            SD = sd(mpn)) %>%
+  mutate(year = "all",
+         season = "all")
+
+# Average MPN by site and year
+mpn_by_year <- df %>%
+  group_by(sample_site, year) %>%
+  summarize(n = n(),
+            MPN = mean(mpn),
+            SD = sd(mpn)) %>%
+  mutate(year = as.character(year),
+         season = "all")
+
+# Average MPN by site and season
+mpn_by_season <- df %>%
+  group_by(sample_site, season) %>%
+  summarize(n = n(),
+            MPN = mean(mpn),
+            SD = sd(mpn)) %>%
+  mutate(year = "all")
+
+# Average MPN by site, season, and year
+mpn_by_year_season <- df %>%
+  group_by(sample_site, season, year) %>%
+  summarize(n = n(),
+            MPN = mean(mpn),
+            SD = sd(mpn)) %>%
+  mutate(year = as.character(year))
+
+# Print summary table of mpn by site, season, and year
+bind_rows(mpn, mpn_by_season, mpn_by_year, mpn_by_year_season) %>%
+  pivot_wider(names_from = year, values_from = c(n, MPN, SD)) %>%
+  relocate(c(1,2,4,7,10,5,8,11,3,6,9)) %>%
+  arrange(sample_site, season) %>%
+  knitr::kable(digits = 0, caption = "Table 4. Average FIB concentrations by Dry/Wet season for samples collected in 2021, 2022, and over both years. Cells highlighted in red indicate that the FIB concentration exceeded the DOH threshold of 70 MPN.")
+```
+
+All of the sites had brackish water, the lowest salinity was at Sweeting Park, which is the furthest inland (Table 5-6). Dissolved oxygen was biologically sufficient at most sites (>4.00 mg/L), with the highest readings found at Sandbar (6.89 ± 1.06 mg/L) and the lowest at Sweeting Park (4.90 ± 1.66 mg/L). Chlorophyll was highest at Sweeting Park (12.30 ± 12.26 ug/L). Turbidity was highest at Tarpon River (6.52 ± 15.71 NTU), which is well within the FDEP threshold of 10 NTU. There were minimal annual differences within the environmental parameters. Temperature, salinity, dissolved oxygen and chlorophyll had minimal differences between wet season and dry season.
+
+```{r env_pars}
+pars <- c("water_temp_c", "salinity_ppt", "turb_ntu", "do_percent", "do_mg_l", "chl_ug_l")
+
+# Average parameters by site
+pars_site <- df %>%
+  group_by(sample_site) %>%
+  summarize(across(all_of(pars), list(mean = mean, sd = sd), na.rm = TRUE)) %>%
+  mutate(year = "all", season = "all")
+
+# Average parameters by site by season
+pars_site_season <- df %>%
+  group_by(sample_site, season) %>%
+  summarize(across(all_of(pars), list(mean = mean, sd = sd), na.rm = TRUE))
+
+# Print summary table of pars by site by season
+bind_rows(pars_site, pars_site_season) %>%
+  select(sample_site, season, 2:13) %>%
+  arrange(sample_site, season) %>%
+  knitr::kable(digits = 2, caption = "Table 5. Average environmental parameter data by Dry/Wet season for samples collected in 2021-2022.")
+
+# Average parameters by site by year
+pars_site_year <- df %>%
+  group_by(sample_site, year) %>%
+  summarize(across(all_of(pars), list(mean = mean, sd = sd), na.rm = TRUE)) %>%
+  mutate(year = as.character(year))
+
+# Print summary table of pars by site by year
+bind_rows(pars_site, pars_site_year) %>%
+  select(sample_site, year, 2:13) %>%
+  arrange(sample_site, year) %>%
+  knitr::kable(digits = 2, caption = "Table 6. Average environmental parameter data by year for samples collected in 2021, 2022, and over both years.")
+```
+
+Time-series graphs of the average concentration of enterococci by month as well as dissolved oxygen, salinity, chlorophyll, and turbidity highlight enterococci spikes in the beginning of wet season at Annie Beck Park, Sweeting Park and Tarpon River in 2021 and 2022 (Figure 4-7). Himmarshee Canal had a spike in the beginning of wet season 2022 but not in 2021. Himmarshee Canal, however, also indicates multiple spikes throughout 2022 that weren't as pronounced at the other sites indicating the influence of unknown external factors.
+
+```{r time_series_graphs, fig.width = 10, fig.height = 10}
+pars2 <- c("salinity_ppt", "turb_ntu", "do_mg_l", "chl_ug_l")
+
+pars_by_month <- df %>%
+  mutate(ym = format(sample_date, "%Y-%m")) %>%
+  group_by(sample_site, ym) %>%
+  summarize(across(all_of(pars2), mean, na.rm = TRUE)) %>%
+  pivot_longer(cols = 3:6)
+
+mpn_by_month <- df %>%
+  mutate(ym = format(sample_date, "%Y-%m")) %>%
+  group_by(sample_site, ym) %>%
+  summarize(mpn = mean(mpn, na.rm = TRUE))
+
+myPlot <- ggplot(pars_by_month, aes(x = ym, y = value)) +
+  geom_line(aes(group = name, color = name)) +
+  facet_wrap(~sample_site, ncol = 2, scales = "free") +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+myPlot +
+  geom_line(data = mpn_by_month, aes(x = ym, y = mpn/23, group = "mpn", color = "mpn")) +
+  scale_y_continuous(sec.axis = sec_axis(~.*23, name = "mpn"))
+
+```
+
+At Annie Beck Park (Fig 4), chlorophyll and FIB presented similar spikes in 2022 but not in 2021. Most of the FIB spikes had simultaneous turbidity spikes, indicating potential sediment mixing associated with the FIB blooms. Spikes at Annie Beck Park are associated with dips in salinity indicating some influence of rainfall on FIB. The FIB spike in November 2022 at Himmarshee Canal was also associated with a low dip in salinity, likely a result of heavy rainfall during Hurricane Nicole and subsequent increases in bacteria associated with stormwater. . Turbidity fluctuates the most at Tarpon River, which might be associated with major rain events impacting construction of infrastructure improvements in 2021 near Rio Vista, as well as remediation dredging in Tarpon River that occurred in the spring of 2022.
+
+## Statistical tests
+
+#### MPN
+```{r, fig.height = 3, fig.width = 7}
+# MPN
+mpn_mod <- lm(log(mpn) ~ sample_site, data = df)
+anova(mpn_mod)
+mpn_emm <- emmeans(mpn_mod, specs = "sample_site", type = "response")
+plot(mpn_emm)
+```
+
+#### Chlorophyll-a
+```{r, fig.height = 3, fig.width = 7}
+# chlA
+chlA_mod <- lm(log(chl_ug_l + 0.00001) ~ sample_site, data = df)
+anova(chlA_mod)
+chlA_emm <- emmeans(chlA_mod, specs = "sample_site", type = "response")
+plot(chlA_emm)
+```
+
+#### Dissolved oxygen
+```{r, fig.height = 3, fig.width = 7}
+# DO
+DO_mod <- lm(log(do_mg_l) ~ sample_site, data = df)
+anova(DO_mod)
+DO_emm <- emmeans(DO_mod, specs = "sample_site", type = "response")
+plot(DO_emm)
+```
+
+#### Turbidity
+```{r, fig.height = 3, fig.width = 7}
+# Turbidity
+turb_mod <- lm(log(turb_ntu) ~ sample_site, data = df)
+anova(turb_mod)
+turb_emm <- emmeans(turb_mod, specs = "sample_site", type = "response")
+plot(turb_emm)
+```
+
+#### Salinity
+```{r, fig.height = 3, fig.width = 7}
+# Salinity
+sal_mod <- lm(log(salinity_ppt) ~ sample_site, data = df)
+anova(sal_mod)
+sal_emm <- emmeans(sal_mod, specs = "sample_site", type = "response")
+plot(sal_emm)
+```
+
+#### Temperature
+```{r, fig.height = 3, fig.width = 7}
+# Temperature
+temp_mod <- lm(log(water_temp_c) ~ sample_site, data = df)
+anova(temp_mod)
+temp_emm <- emmeans(temp_mod, specs = "sample_site", type = "response")
+plot(temp_emm)
+```
+
+Regressions for MPN vs. each environmental parameter
+```{r}
+mod <- lm(log(mpn) ~ log(water_temp_c) + log(salinity_ppt) + log(turb_ntu) + 
+            log(do_mg_l) + log(chl_ug_l + 0.00001), 
+          data = df)
+anova(mod)
+
+ggplot(df, aes(x = log(water_temp_c), y = log(mpn))) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(df, aes(x = log(salinity_ppt), y = log(mpn))) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(df, aes(x = log(turb_ntu), y = log(mpn))) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(df, aes(x = log(do_mg_l), y = log(mpn))) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+ggplot(df, aes(x = log(chl_ug_l), y = log(mpn))) + 
+  geom_point() +
+  geom_smooth(method = "lm")
+
+
+```
+
+
+## Appendix: summaries of each site
+Percentage of exceedances
+Average MPN
+Annual and seasonal trends in MPN
+Average (and range?) environmental parameters
+
+
+## 

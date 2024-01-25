@@ -1,0 +1,3699 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Waterway Quality Monitoring Report to the City of Fort Lauderdale: Year 2},
+  pdfauthor={R. Cunning for Miami Waterkeeper},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx,grffile}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+
+\title{Waterway Quality Monitoring Report to the City of Fort Lauderdale: Year
+2}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Example Report Using RMarkdown}
+\author{R. Cunning for Miami Waterkeeper}
+\date{1/18/2024}
+
+\begin{document}
+\maketitle
+
+\hypertarget{executive-summary}{%
+\subsection{EXECUTIVE SUMMARY}\label{executive-summary}}
+
+Miami Waterkeeper was contracted by the City of Fort Lauderdale to
+conduct waterway quality monitoring at ten high-value recreational sites
+for the last two years (January 2021- December 2022). The data is
+rapidly made available to the residents and visitors of the City of Fort
+Lauderdale through the online app -Swim Guide, social media and the
+Miami Waterkeeper website so they can make informed decisions about the
+potential health risks of the water within recreational areas.
+
+Fecal indicator bacteria (FIB), including enterococci, are measured in
+water bodies to determine whether there are potential pathogens present
+that may be harmful to human health. High amounts of enterococci at a
+site can indicate a nearby source of FIB (from stormwater runoff, septic
+tanks, sewage leaks, etc). Enterococci can come from various fecal
+sources, including human sewage, dogs, birds, wildlife, etc. While
+enterococci is an excellent metric for health-related waterway quality,
+its presence is more like a symptom of a deeper issue, which is why
+monitoring it is vital. When the enterococci levels exceed a certain
+threshold (70+ CPU/MPN per 100 mL), the Florida Department of Health
+(DOH) advises that contact with the water may pose an increased health
+risk.
+
+The data collected from two years of waterway quality monitoring around
+the City of Fort Lauderdale has allowed us to better understand the
+water quality trends at each site. Annually, 39\% of the weekly samples
+we collected had exceeded the DOH recommended threshold for safe
+recreational usage. Of the ten sites, four sites stood out as locations
+with persistent water quality issues, including Sweeting Park,
+Himmarshee Canal, Tarpon River, and Annie Beck Park.
+
+\begin{itemize}
+\item
+  Samples from Sweeting Park have consistently exceeded the standard
+  about 97\% of the time and has shown no improvements in water quality
+  since 2021. Monitoring has allowed us to measure this trend, but the
+  FIB source is unclear. The City has conducted smoke testing in the
+  North Fork basin to identify potential leaks in the sanitary sewer
+  system. However, a homeless encampment nearby continues to be a
+  potential source of concern as well as abundant wildlife. Further
+  investigation is recommended. While the compliance rate with the
+  highly conservative FDOH standard has not improved, the number of
+  exceedances over 1000 MPN has been reduced from 10 incidences in 2021
+  to half that in 2022. While this does not speak to potential impacts
+  to human health, it does address potential source reduction in inputs
+  over time.
+\item
+  There was a reduction in the number of exceedances at Himmarshee Canal
+  and Tarpon River. The average enterococci concentration has been
+  increasing over time in the Himmarshee Canal and decreasing at Tarpon
+  River. The source of the enterococci could be potentially related to
+  stormwater discharge or infrastructure malfunctions, but further
+  investigation is recommended. Monitoring these sites during waterway
+  quality improvement initiatives, like dredging, is crucial to capture
+  quantifiable changes in FIB as a metric of efficacy.
+\item
+  Annie Beck Park has shown an increasing trend in enterococci
+  concentrations over the last 2 years. Monitoring has allowed us to
+  identify this increasing trend. A leaking sewer pipe under a nearby
+  bridge was identified in late December, 2022 which may have
+  contributed to the increased bacterial count at Annie Beck prior to
+  its repair. Further investigation is recommended to ensure efficacy of
+  infrastructure repairs.
+\end{itemize}
+
+\hypertarget{highlights-from-two-years-of-water-quality-monitoring-2021---2022}{%
+\subsection{HIGHLIGHTS FROM TWO YEARS OF WATER QUALITY MONITORING (2021
+-
+2022)}\label{highlights-from-two-years-of-water-quality-monitoring-2021---2022}}
+
+\emph{All metrics below exclude the resample and replicate collections,
+unless noted otherwise.}
+
+\begin{itemize}
+\tightlist
+\item
+  1,008 total water samples were collected and analyzed (500 in 2021,
+  508 in 2022) for FIB, dissolved oxygen, temperature, salinity,
+  turbidity, and chlorophyll a
+
+  \begin{itemize}
+  \tightlist
+  \item
+    1,639 total water samples were collected and analyzed when including
+    resamples and replicates
+  \end{itemize}
+\item
+  399 samples were in exceedance of the DOH recommended FIB threshold
+  for public recreation, out of 1,008 collected samples or 39\%
+  annually, (200 in 2021, 199 in 2022)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Recreational area with most exceedances: Sweeting Park (Passed 3\%
+    of the time)\\
+  \item
+    Recreational area with least exceedances: Sunrise Bay Hugh Birch
+    Park (Passed 95\% of the time)
+  \end{itemize}
+\item
+  There were 22,161 total Swim Guide views at City of Fort
+  Lauderdale-sponsored locations (11,509 in 2021, 10,652 in 2022)
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Recreational area with the most views: Annie Beck Park\\
+  \item
+    Recreational area with the least views: Royal Palm Drive/Las Olas
+    Blvd
+  \end{itemize}
+\item
+  Three sites stood out as having excellent water quality:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    Sunrise Bay /Hugh Taylor Birch State Park (Passed 95\% of the
+    time)\\
+  \item
+    Lake Sylvia (Passed 91\% of the time )\\
+  \item
+    Sandbar at SE 10th Street (Passed 86\% of the time)
+  \end{itemize}
+\item
+  Four sites stood out as having consistently poor water quality,
+  according to the DOH\\
+  recommended FIB threshold for public recreation:
+
+  \begin{itemize}
+  \tightlist
+  \item
+    New River North Fork at Sweeting Park (97\% exceedance)\\
+  \item
+    Himmarshee Canal (83\% exceedance)\\
+  \item
+    Tarpon River at Rio Vista Boulevard (60\% exceedance)\\
+  \item
+    Annie Beck Park (47\% exceedance)
+  \end{itemize}
+\end{itemize}
+
+\hypertarget{introduction}{%
+\subsection{INTRODUCTION}\label{introduction}}
+
+Visiting a beach or waterway is the number one activity of Florida's
+tourists, undeniably the biggest draw for the state's \$112 billion
+annual tourism revenue. Almost half a million people are directly
+employed in Florida's ocean economy. Florida's tourism industry, job
+market, recreation, environment, and even Florida's culture depends on
+having clean waterways.
+
+South Florida's waterways are also particularly vulnerable to pollution
+because of our low elevation, porous limestone geology, aging
+infrastructure, and the threat of sea-level rise. Without clean
+waterways, our ocean economy, job market, recreation, environment, and
+culture are all at risk. If we don't protect our waterways, we risk
+jeopardizing our coastal community and environment for all future
+generations.
+
+The City of Fort Lauderdale hosts a thriving community fueled by
+tourism, recreation, and real estate. The recreational use of waterways
+is valuable to the Fort Lauderdale community; however, despite its
+importance to the community, relatively little data about waterway
+quality was readily available to the residents or visitors who use the
+waterways for recreation. While the Florida Department of Health (DOH)
+monitors for Fecal Indicator Bacteria (FIB), the data is hard to find
+and only focuses on beaches rather than inland waterways such as canals,
+rivers, or lakes. While there is a higher potential for ingestion of the
+bacteria while swimming at the beach, the canals and rivers are often
+used by residents and visitors who enjoy kayaking, paddle boarding,
+canoeing, and other recreational watersports.
+
+Miami Waterkeeper has addressed these gaps over the last two years
+through a contract with the City of Fort Lauderdale. Our weekly waterway
+quality monitoring program emulates the DOH methodology and frequency
+for ten inland waterways for which publicly accessible waterway quality
+data is a necessity. Miami Waterkeeper makes the FIB data available to
+the public as soon as it is available, along with the DOH data, through
+the Swim Guide app and social media so that residents and visitors can
+make informed decisions before interacting with the inland waterways in
+the City of Fort Lauderdale.
+
+Waterway quality issues may seriously impact the health of those who
+come in contact with recreational water. It is important to many
+concerned residents and visitors of the City of Fort Lauderdale to have
+access to relevant waterway quality data to ensure they are informed
+about potential health risks before interacting with the water at
+recreational areas. Waterway quality threats, including Sanitary Sewage
+Overflows (SSOs) which can cause temporary FIB impairments, are being
+addressed by the City of Fort Lauderdale and have been reduced over the
+last few years due to the infrastructure investments.
+
+With information about waterway quality from the same locations taken
+over time, we can gather baseline data about conditions and inform the
+public about changes in waterway quality. This report summarizes data
+collected during two years of weekly sampling at ten sites in the City
+of Fort Lauderdale.
+
+\hypertarget{about-miami-waterkeeper}{%
+\subsection{ABOUT MIAMI WATERKEEPER}\label{about-miami-waterkeeper}}
+
+As a Miami-based non-profit organization, Miami Waterkeeper is dedicated
+to protecting South Florida's coastal waters and the surrounding
+watershed. Launched in 2010, Miami Waterkeeper has become a leading
+advocate for clean water, inspiring a movement of empowered citizens
+dedicated to achieving swimmable, drinkable, fishable water. Often
+tackling issues on multiple fronts, we address environmental, social,
+and policy water issues using community outreach, scientific research,
+and civic and legal action.
+
+Miami Waterkeeper defends the public's right to use and enjoy clean
+water by focusing on clean water, ecosystem protection, and sea-level
+rise readiness in South Florida.
+
+Miami Waterkeeper's jurisdiction spans a watershed that serves more than
+five (5) million people across Miami-Dade and Broward counties and
+encompasses the mid-section of the Florida Reef Tract. As part of our
+science and research platform, our water quality monitoring program
+samples 27 locations weekly in Miami-Dade and Broward Counties to
+determine the level of the fecal indicator bacteria (FIB) enterococci
+and the safety of the waterways for swimming or other activities and
+immediately share the results with the public.
+
+\hypertarget{about-this-program}{%
+\subsection{ABOUT THIS PROGRAM}\label{about-this-program}}
+
+The City of Fort Lauderdale initially contracted with Miami Waterkeeper
+on November 13, 2020, to expand waterway quality monitoring to inland
+waterways, focusing on areas of high recreational value. The annual
+contract was renewed to include sampling throughout 2022, and we are
+currently in the process of renewing a multi-year contract.
+
+At the ten weekly sampling sites, samples for the analysis of the fecal
+indicator bacteria (FIB) enterococci were collected, along with
+parameters such as dissolved oxygen (DO), chlorophyll a, salinity,
+turbidity, and temperature. Sample collection, processing, and analyses
+were performed under protocols similar to that of the Florida Department
+of Health (DOH)'s Florida Healthy Beaches Program. The DOH sets the
+threshold of FIB at 70 MPN for public recreation; levels greater than 70
+MPN indicate possible risks to human health. Miami Waterkeeper collected
+samples from an exceeding site a second time in the same week, referred
+to as a ``resample.''
+
+The aims of the contract were to:
+
+\begin{itemize}
+\item
+  Provide weekly waterway quality monitoring at ten City of Fort
+  Lauderdale sites
+\item
+  Provide a baseline understanding of FIB in local waterways
+\item
+  Inform the local community about waterway quality monitoring results
+\end{itemize}
+
+Per our original proposal, we conducted the following waterway quality
+monitoring tasks:
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  Weekly sampling at four designated Watersport Activity Areas and six
+  outside Designated Wastersports Activity Areas or of general interest.
+\item
+  Swim Guide app development and City of Fort Lauderdale Banner Ads
+\end{enumerate}
+
+We publish our weekly waterway quality testing information along with
+the water quality testing information produced by the state DOH for
+Broward County beaches via the Swim Guide Application, our social media
+channels, and on our website www.miamiwaterkeeper.org/water\_monitoring.
+Numeric data are also available for the public to download on our
+website.
+
+The Swim Guide app is available on both web and mobile devices. The app
+had 22,161 views from January 2021- December 2022, at the City of Fort
+Lauderdale sponsored sites (10,652 in 2022).
+
+The app utilizes an easy-to-read format, with green indicating good
+water quality (0-70 CFU/MPN enterococci per 100 mL sample) and red
+indicating poor water quality (71+ CFU/MPN enterococci per 100 mL
+sample). Historical data is also accessible. All of our weekly
+monitoring sites and the most recent results are available to the public
+for easy access.
+
+A banner ad is included on the Swim Guide pages of the funded sites The
+City of Fort Lauderdale's banner ads have been featured on the pages for
+all ten Fort Lauderdale sites since January 2021.
+
+\emph{Site Descriptions:}
+
+Ten locations in the City of Fort Lauderdale were selected in
+coordination with the Public Works Department (Figure 1). These
+included:
+
+Annie Beck Park is approximately 2.4 acres in the Victoria Park
+neighborhood. It is next to the Rio Navarro canal. It offers amenities
+like nature trails, open areas, and a waterfront suitable for kayak
+launching. Slow flow, organic film/biofilm on the water's surface, and
+floating leaves and vegetation are frequently noted at this site.
+
+Coontie Hatchee Park (South Fork of the New River)is approximately 2.6
+acres along the South Fork of the New River and has amenities such as a
+kayak/canoe launch, waterfront views, bicycle racks, fitness trail with
+stations, picnic tables, and pavilions. Foam on the water's surface,
+floating vegetation, and some trash are noted at this site.
+
+Himmarshee Canal was a tributary of the New River, historically a major
+artery in and out of the Everglades. The word translates to ``new
+water'' or ``new river.'' The Himmarshee Canal now starts near
+US1/Federal Highway and traverses the neighborhoods of Colee Hammock and
+Beverly Heights as it flows under Las Olas Blvd and out to the New
+River. Floating vegetation, foam/organic film on the water's surface,
+and slow flow are frequently noted at this site.
+
+Lake Sylvia (Designated Watersports Activity Area) is suitable for water
+skiing, tubing, kneeboarding, and wakeboarding. Lake Sylvia is within
+the Harbor Beach neighborhood. Water is often noted as clear. Middle
+River at George English Park (Designated Watersports Activity Area) is
+suitable for water skiing, tubing, kneeboarding, and wakeboarding.
+George English Park is approximately 19.7 acres and offers such
+amenities as kayaking, paddle boarding, fishing, boat access/ramp, and
+walking/jogging trails. Water is often noted as clear.
+
+Royal Palm Drive at Las Olas Boulevard is within the Nurmi Isles
+neighborhood north of Las Olas Blvd. A smell of sewage is occasionally
+noted at this site but is inconsistent. Water is often noted as clear
+with occasional floating vegetation.
+
+Sand Bar (Designated Watersports Activity Area) at SE 10th Street is
+suitable for water skiing, tubing, kneeboarding, and wakeboarding. It is
+also a popular area for boaters to moor and enjoy the water. Water is
+often noted as clear.
+
+Sunrise Bay at Hugh Taylor Birch State Park (Designated Watersports
+Activity Area) is suitable for water skiing, tubing, kneeboarding, and
+wakeboarding. Sunrise Bay is within the Coral Ridge neighborhood and is
+adjacent to Hugh Taylor Birch State Park. Hugh Taylor Birch is the
+city's own ``Central Park,'' complete with gopher tortoises and boat
+access from the Intracoastal waterway. Water is observed to be brown
+with occasional floating vegetation.
+
+Sweeting Park (North Fork of the New River) is approximately 0.3 acres
+along the North Fork of the New River and has amenities such as fishing,
+a dock, and park benches. The site has slow- moving water, frequently
+has biofilm or other organic material on the surface along with
+vegetation, and the river floor appears to be silty with fine sediment
+particles under normal conditions.
+
+Tarpon River at Rio Vista Boulevard intersects with the New River at two
+locations, SW 8th Ave and Ponce De Leon Drive. The Tarpon River
+traverses the neighborhoods of Tarpon River, Downtown Fort Lauderdale,
+and Rio Vista. Along the way, at SW 11th Street, is the Tarpon Cove
+Park, with amenities such as fishing and water frontage. Floating
+vegetation, brown water, foam/biofilm on the surface, and construction
+has been noted at this site.
+
+\hypertarget{methods}{%
+\subsection{METHODS}\label{methods}}
+
+This monitoring program implements Miami Waterkeeper's fecal indicator
+bacteria (FIB) monitoring protocols to include ten sites of high
+recreational value in the City of Fort Lauderdale. Sample collection
+occurs weekly, along with resampling and reanalysis, when the threshold
+of 70 MPN is exceeded.
+
+Miami Waterkeeper uses the IDEXX system for routine sampling collection
+and enumeration of the FIB enterococci present in water quality samples.
+The IDEXX system only presents results as whole numbers. Prior to
+collecting samples, precautions are taken to ensure that sampling
+bottles are sterile; this includes using an autoclave to sanitize the
+bottles of any bacteria or impurities with heat and pressure. Gloves are
+always used when handling the samples so they do not become contaminated
+with bacteria. Samples are collected approximately 6-12 inches below the
+surface to best capture conditions where recreational activities take
+place. The samples were collected without making contact with the bottom
+or stirring up sediment. Samples were collected facing the oncoming
+current so as not to contaminate the sample with the sample collector's
+bacteria or sediment put into suspension. Samples are immediately
+(within 15 min of collection) placed on ice for preservation.
+
+IDEXX trays containing the water sample and the IDEXX enterolert reagent
+are placed in an incubator for 24-28 hours and then analyzed under UV
+light for the Most Probable Number (MPN).
+
+Sample collection, processing, and analysis protocols are based on the
+EPA Method 1600 protocol and the Florida Department of Health (DOH)
+standards for enterococci. The field technicians include recent
+graduates and students from local universities who are trained in
+collecting field samples, sample processing, and laboratory analyses.
+
+\emph{Enterococci Criteria}
+
+The following are the EPA-recommended enterococci thresholds that the
+DOH uses to determine quality of the water.
+
+\begin{itemize}
+\tightlist
+\item
+  0-35 MPN/CFU enterococci per 100 mL sample: Good
+\item
+  36 -- 70 MPN/CFU enterococci per 100 mL sample: Moderate
+\item
+  71+ MPN/CFU enterococci per 100 mL sample: Poor
+\end{itemize}
+
+Swim Guide utilizes an easy-to-read format, with green indicating
+``good'' water quality and red indicating ``poor'' water quality.
+Enterococci results that fall within the ``moderate'' range are reported
+as ``good'' on Swim Guide.
+
+\emph{Field Collections and Sample Handling Quality Control}
+
+With each sampling batch, a site is selected at random to be collected a
+second time as a field replicate. The results are analyzed to evaluate
+the field collection and sample handling techniques. Field technicians
+are audited in the first month of independent sampling. After the
+initial audit, they are then audited every six months. Technicians may
+also be randomly audited at any time. Images of the site are also taken
+with each sample.
+
+In 2022, we implemented a new quality control measure that allows the
+laboratory staff to verify that samples were appropriately preserved on
+ice throughout the sampling process (under 6°C). This is accomplished
+using a Temperature control bottle, which is placed in each cooler at
+the beginning of the sampling process and then measured with a
+thermometer when the field technicians reach the lab.
+
+\emph{Laboratory Quality Control}
+
+With each analytical batch, a sample selected at random is collected and
+analyzed in duplicate. Every batch also includes a laboratory blank,
+which is analyzed to evaluate the aseptic technique, laboratory
+sanitation practices, and laboratory equipment's sterility. Laboratory
+technicians are audited in the first month of independent analysis.
+After the initial audit, they are then audited every six months.
+Technicians may also be randomly audited at any time. Images of each
+IDEXX tray are also taken when samples are under UV light and analyzed.
+
+\emph{Environmental Data}
+
+We also collected waterway quality data on environmental conditions at
+the time of samplings, such as weather, tide, temperature, and rainfall.
+Our field technicians make weather observations on site, determining
+whether conditions at the time of sample collections are sunny, cloudy,
+or rainy; we also determine the direction of the current (right to left,
+left to right, straight toward, or still). Our wind speed and air
+temperature data are taken from the NavClock app, which pulls from
+National Oceanic and Atmospheric Administration (NOAA) weather sites.
+Rainfall and tide are taken from the NOAA National Centers for
+Environmental Information (NCEI) database.
+
+\emph{Documentation and Data Management}
+
+Data is recorded on a data sheet and then entered manually into a master
+spreadsheet housed on Google Drive by a technician. All data entered is
+audited and analyzed by the Water Quality Research Manager for quality
+assurance and accuracy. Scans of the data sheets and images from the
+field and laboratory quality control protocols are stored in Google
+Drive. After samples are analyzed, the Water Quality Research Manager
+reviews and then publishes the exceedance results on Swim Guide.
+
+\emph{Methods for Analysis}
+
+Two sets of analyses were performed. The first set was a descriptive
+statistics evaluation of the entire period of study for the ten City of
+Fort Lauderdale sites. Then an ANOVA and linear regression model were
+performed from the time period of the contract with the City of Fort
+Lauderdale.
+
+\hypertarget{results}{%
+\subsection{RESULTS}\label{results}}
+
+\emph{Swim Guide Metrics}
+
+\emph{Water Quality Results}
+
+\hypertarget{import-data}{%
+\section{Import data}\label{import-data}}
+
+\hypertarget{water-quality-results}{%
+\section{Water quality results}\label{water-quality-results}}
+
+\hypertarget{number-of-samples-re-samplesreplicates}{%
+\subsection{Number of samples
+(re-samples/replicates?)}\label{number-of-samples-re-samplesreplicates}}
+
+\begin{longtable}[]{@{}lrrr@{}}
+\toprule
+sample\_site & 2021 & 2022 & Total\tabularnewline
+\midrule
+\endhead
+Annie Beck Park & 50 & 51 & 101\tabularnewline
+Coontie Hatchee Park & 50 & 51 & 101\tabularnewline
+Himmarshee Canal & 50 & 51 & 101\tabularnewline
+Lake Sylvia & 50 & 51 & 101\tabularnewline
+Middle River George English Park & 50 & 51 & 101\tabularnewline
+Royal Palm Drive Las Olas Blvd & 50 & 51 & 101\tabularnewline
+Sunrise Bay Hugh Taylor Birch Park & 49 & 49 & 98\tabularnewline
+Sandbar & 50 & 51 & 101\tabularnewline
+Sweeting Park & 50 & 51 & 101\tabularnewline
+Tarpon River & 50 & 51 & 101\tabularnewline
+Total & 499 & 508 & 1007\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{exceedances-by-site}{%
+\subsection{Exceedances by site}\label{exceedances-by-site}}
+
+Number of times (and \% of samples) each site exceeded threshold for
+eneterococci. Table and bar graph by year and site in 2022 report Table
+and bar graph by wet/dry season and site
+
+\begin{longtable}[]{@{}lrrlrlrrlrlrrlrl@{}}
+\toprule
+\begin{minipage}[b]{0.08\columnwidth}\raggedright
+sample\_site\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+n\_samples\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_doh\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_doh\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_dep\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_dep\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+n\_samples\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_doh\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_doh\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_dep\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_dep\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_samples\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_doh\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_doh\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+n\_ex\_dep\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedright
+pct\_ex\_dep\_all\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+40\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+20\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+53\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+39\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+47\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+30\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+46\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+16\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+22\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+43\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+22\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+45\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+19\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+90\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+36\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+72\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+78\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+55\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+85\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+84\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+63\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+4\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+3\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+6\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+9\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+9\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+5\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+16\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+10\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+20\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+16\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+18\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+13\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+20\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+12\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+7\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+14\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+12\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+17\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+12\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+12\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+2\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+2\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+2\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+99\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+5\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+5\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+2\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+2\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+6\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+12\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+16\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+4\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+14\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+8\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+8\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+98\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+43\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+86\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+96\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+88\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+98\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+97\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+88\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+87\%\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.08\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+33\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+66\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+34\%\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+55\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+37\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+61\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+60\%\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+36\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedright
+36\%\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-4-1.pdf}
+
+\begin{longtable}[]{@{}llrrlrll@{}}
+\toprule
+sample\_site & season & n\_samples & n\_ex\_doh & pct\_ex\_doh &
+n\_ex\_dep & pct\_ex\_dep & year\tabularnewline
+\midrule
+\endhead
+Annie Beck Park & Dry & 55 & 23 & 42\% & 18 & 33\% & all\tabularnewline
+Annie Beck Park & Wet & 46 & 24 & 52\% & 12 & 26\% & all\tabularnewline
+Coontie Hatchee Park & Dry & 55 & 23 & 42\% & 11 & 20\% &
+all\tabularnewline
+Coontie Hatchee Park & Wet & 46 & 22 & 48\% & 8 & 17\% &
+all\tabularnewline
+Himmarshee Canal & Dry & 55 & 44 & 80\% & 35 & 64\% & all\tabularnewline
+Himmarshee Canal & Wet & 46 & 41 & 89\% & 29 & 63\% & all\tabularnewline
+Lake Sylvia & Dry & 55 & 7 & 13\% & 4 & 7\% & all\tabularnewline
+Lake Sylvia & Wet & 46 & 2 & 4\% & 1 & 2\% & all\tabularnewline
+Middle River George English Park & Dry & 55 & 6 & 11\% & 6 & 11\% &
+all\tabularnewline
+Middle River George English Park & Wet & 46 & 12 & 26\% & 7 & 15\% &
+all\tabularnewline
+Royal Palm Drive Las Olas Blvd & Dry & 55 & 12 & 22\% & 10 & 18\% &
+all\tabularnewline
+Royal Palm Drive Las Olas Blvd & Wet & 46 & 5 & 11\% & 2 & 4\% &
+all\tabularnewline
+Sunrise Bay Hugh Taylor Birch Park & Dry & 54 & 4 & 7\% & 2 & 4\% &
+all\tabularnewline
+Sunrise Bay Hugh Taylor Birch Park & Wet & 45 & 1 & 2\% & 0 & 0\% &
+all\tabularnewline
+Sandbar & Dry & 55 & 9 & 16\% & 7 & 13\% & all\tabularnewline
+Sandbar & Wet & 46 & 5 & 11\% & 1 & 2\% & all\tabularnewline
+Sweeting Park & Dry & 55 & 52 & 95\% & 48 & 87\% & all\tabularnewline
+Sweeting Park & Wet & 46 & 46 & 100\% & 40 & 87\% & all\tabularnewline
+Tarpon River & Dry & 55 & 35 & 64\% & 20 & 36\% & all\tabularnewline
+Tarpon River & Wet & 46 & 26 & 57\% & 16 & 35\% & all\tabularnewline
+\bottomrule
+\end{longtable}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-4-2.pdf}
+
+\hypertarget{enterococci-concentrations-by-site}{%
+\subsection{Enterococci concentrations by
+site}\label{enterococci-concentrations-by-site}}
+
+Average MPN by year, wet/dry season, and site
+
+\begin{longtable}[]{@{}llrrrrrrrrr@{}}
+\toprule
+\begin{minipage}[b]{0.23\columnwidth}\raggedright
+sample\_site\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedright
+season\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+n\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+MPN\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+SD\_2021\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+n\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.06\columnwidth}\raggedleft
+MPN\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+SD\_2022\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+n\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+MPN\_all\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+SD\_all\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+178\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+510\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+309\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+700\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+244\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+614\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+96\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+156\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+251\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+494\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+175\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+374\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+275\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+730\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+379\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+897\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+327\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+810\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+65\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+173\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+480\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+125\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+346\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+92\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+130\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+98\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+271\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+696\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+173\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+500\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+363\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+654\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+1272\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3904\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+822\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2835\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+482\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+865\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+1479\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4734\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+990\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3438\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+223\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+172\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+1020\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2646\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+621\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1898\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+26\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+64\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+64\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+39\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+75\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+46\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+122\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+447\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+85\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+323\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+61\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+59\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+125\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+99\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+62\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+100\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+199\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+651\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+130\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+466\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+176\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+36\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+57\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+134\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+123\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+230\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+43\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+175\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+36\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+105\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+26\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+99\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+82\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+142\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+54\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+39\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+110\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+13\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+19\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+18\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+15\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+68\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+60\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+171\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+130\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+53\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+87\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+85\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+226\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+69\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+171\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+26\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+38\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+601\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1391\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+703\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1696\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+653\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1545\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+830\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1851\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+459\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+786\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+641\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1412\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+333\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+345\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+1001\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2368\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+667\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1707\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+50\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+463\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1353\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+51\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+360\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1276\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+101\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+411\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1309\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+656\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1794\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+258\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+608\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+55\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+453\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1332\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.23\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+237\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+418\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23\strut
+\end{minipage} & \begin{minipage}[t]{0.06\columnwidth}\raggedleft
+484\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1794\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+360\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1294\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{environmental-parameters-by-site}{%
+\subsection{Environmental parameters by
+site}\label{environmental-parameters-by-site}}
+
+Average temperature, salinity, turbidity, DO, and chlA by wet/dry season
+and site (combined years) Average temperature, salinity, turbidity, DO,
+and chlA by year and site
+
+\begin{longtable}[]{@{}llrrrrrrrrrrrr@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+sample\_site\strut
+\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
+season\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+water\_temp\_c\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+water\_temp\_c\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+salinity\_ppt\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+salinity\_ppt\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+turb\_ntu\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+turb\_ntu\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+do\_percent\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+do\_percent\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+do\_mg\_l\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+do\_mg\_l\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+chl\_ug\_l\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+chl\_ug\_l\_sd\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.21\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.06\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.62\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.92\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.32\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.91\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.24\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23.94\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.82\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+8.74\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.22\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.21\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.61\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+20.18\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.08\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.71\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+82.69\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.56\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.49\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+11.79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+73.78\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.43\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.29\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.05\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.42\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+13.66\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+75.34\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.74\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.03\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.50\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+9.63\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.32\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.70\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+71.95\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.05\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.08\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.95\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.47\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.61\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.60\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+69.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.97\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.55\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.13\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.97\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.26\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+19.33\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.65\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+71.64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.82\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.29\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.05\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.66\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.18\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+15.78\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.41\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.56\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.90\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+66.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.77\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.59\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.46\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.09\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.12\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+92.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.23\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.17\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.98\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.05\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.74\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+31.60\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.27\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.41\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+93.33\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.44\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.36\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.52\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.99\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.07\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.91\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28.53\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.89\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+92.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.99\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.72\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.95\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.17\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.65\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.38\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+85.93\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.99\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.26\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.02\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.27\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.81\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.84\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+87.66\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.60\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.31\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.55\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.61\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.68\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+19.91\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.27\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.46\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+83.90\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.89\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.62\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.81\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.71\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.26\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.85\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+83.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.81\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.83\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.25\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.90\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.13\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.93\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.37\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+85.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.87\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.09\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.31\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.34\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.22\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+23.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.73\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.87\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+81.88\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.19\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.49\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.85\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.41\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.87\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.36\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.44\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.90\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.33\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+11.63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.92\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.86\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.50\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.22\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.91\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.29\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.72\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.11\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.50\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.35\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.52\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.90\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.29\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.00\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.56\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.69\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.73\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.14\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.52\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.09\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29.03\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.51\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.77\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.67\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+102.76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.74\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.89\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.06\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.56\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.67\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.19\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.87\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.47\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.34\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.06\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+99.93\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+8.10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.91\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.57\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.33\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.57\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.28\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+106.14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+22.86\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.87\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.45\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.13\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.00\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.19\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.89\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.88\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.64\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+62.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+22.60\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.90\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.66\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.26\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.73\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.48\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.46\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+62.22\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+21.52\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.98\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.62\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+9.09\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.18\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29.63\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.31\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.56\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+63.90\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+24.01\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.81\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.72\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.00\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.03\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.56\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.49\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.52\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+15.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+74.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.34\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.01\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.71\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Dry\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+24.94\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+19.80\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.04\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+18.32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+77.87\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+11.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.72\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.05\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.16\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+Wet\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+1.77\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+15.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.33\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.11\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+71.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.88\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.06\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.11\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.18\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\begin{longtable}[]{@{}llrrrrrrrrrrrr@{}}
+\toprule
+\begin{minipage}[b]{0.11\columnwidth}\raggedright
+sample\_site\strut
+\end{minipage} & \begin{minipage}[b]{0.02\columnwidth}\raggedright
+year\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+water\_temp\_c\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+water\_temp\_c\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+salinity\_ppt\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+salinity\_ppt\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+turb\_ntu\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+turb\_ntu\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.05\columnwidth}\raggedleft
+do\_percent\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+do\_percent\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+do\_mg\_l\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.03\columnwidth}\raggedleft
+do\_mg\_l\_sd\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+chl\_ug\_l\_mean\strut
+\end{minipage} & \begin{minipage}[b]{0.04\columnwidth}\raggedleft
+chl\_ug\_l\_sd\strut
+\end{minipage}\tabularnewline
+\midrule
+\endhead
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.52\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.06\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.33\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.62\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.49\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+80.76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+9.02\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.64\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.27\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.76\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28.12\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.56\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.10\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.37\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.26\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.39\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+89.20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+15.37\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.19\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.07\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.36\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.78\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Annie Beck Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.21\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.06\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.62\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.92\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.32\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.91\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.14\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.19\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+11.46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.70\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.60\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.97\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+69.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.95\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.19\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.93\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.09\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.50\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28.01\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.66\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+12.11\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.35\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.10\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+77.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.14\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.67\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.69\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.01\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Coontie Hatchee Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.45\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+11.79\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+73.78\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.43\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.29\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.92\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.11\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.22\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.42\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.11\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+64.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.07\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.68\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.90\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.10\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.48\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.99\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.61\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.97\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+74.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.18\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.26\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.89\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.18\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.67\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Himmarshee Canal\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.31\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.70\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.61\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.60\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+69.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.97\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.55\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.13\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.23\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.58\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.42\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+92.19\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.70\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.20\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.67\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.51\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+2.98\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29.61\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.81\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.64\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+93.67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+9.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.27\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.66\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.97\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Lake Sylvia\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.09\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+30.20\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.12\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+92.94\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.23\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.17\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.98\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.32\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.26\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.56\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.16\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+82.19\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+8.31\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.76\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.65\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.36\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.28\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.83\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.66\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.34\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.23\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+89.67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+11.17\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.23\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.90\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.74\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Middle River George English Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.46\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+22.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.64\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.65\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.38\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+85.93\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.99\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.77\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.26\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.28\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.03\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.44\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.24\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.65\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+81.08\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+8.62\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.59\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.03\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.85\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.52\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.57\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.66\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.29\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.02\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.51\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.59\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.02\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.87\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Royal Palm Drive Las Olas Blvd\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.40\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+25.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.26\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.85\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+83.80\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.81\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.83\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.25\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.12\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.13\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.27\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.73\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.10\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.81\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+84.40\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.13\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.81\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.91\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.31\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.60\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.61\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.62\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.89\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.20\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.99\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+88.34\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.84\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.03\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.17\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sunrise Bay Hugh Taylor Birch Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.36\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.37\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.44\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.15\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.90\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+86.33\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+11.63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.92\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.86\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.92\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.50\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.21\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.00\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29.18\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.82\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.74\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+98.71\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.46\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.64\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+0.67\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.06\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.82\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.17\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+28.88\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+6.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.71\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.63\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+106.73\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+20.51\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.14\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.43\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.93\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sandbar\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.52\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.09\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+29.03\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.51\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.77\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.67\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+102.76\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+16.74\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.89\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.06\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.56\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.67\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+26.86\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.02\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.49\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.68\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.47\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.58\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+64.18\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+20.46\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.04\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.53\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+10.85\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.98\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.15\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.38\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.29\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+5.07\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.31\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+61.85\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+24.63\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.76\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.79\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.71\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+15.76\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Sweeting Park\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.00\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.19\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.89\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+4.88\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.64\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+62.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+22.60\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.90\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.66\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.30\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.26\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2021\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.14\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.30\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.75\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.51\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+7.68\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+18.62\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+72.71\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.99\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.22\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.04\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.50\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+1.31\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+2022\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.97\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.66\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.68\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.39\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+12.29\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+77.12\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+13.26\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.46\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+0.97\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+4.58\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.31\strut
+\end{minipage}\tabularnewline
+\begin{minipage}[t]{0.11\columnwidth}\raggedright
+Tarpon River\strut
+\end{minipage} & \begin{minipage}[t]{0.02\columnwidth}\raggedright
+all\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+27.56\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+3.49\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+17.72\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+7.49\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+6.52\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+15.71\strut
+\end{minipage} & \begin{minipage}[t]{0.05\columnwidth}\raggedleft
+74.96\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+14.23\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+5.34\strut
+\end{minipage} & \begin{minipage}[t]{0.03\columnwidth}\raggedleft
+1.01\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+3.54\strut
+\end{minipage} & \begin{minipage}[t]{0.04\columnwidth}\raggedleft
+2.71\strut
+\end{minipage}\tabularnewline
+\bottomrule
+\end{longtable}
+
+\hypertarget{time-series-graphs-by-month-of-average-enterococci-concentrations-fib-by-site}{%
+\subsection{Time series graphs (by month) of average enterococci
+concentrations (FIB) by
+site}\label{time-series-graphs-by-month-of-average-enterococci-concentrations-fib-by-site}}
+
+Annie Beck Park, Himmarshee Canal, Sweeting Park, Tarpon River in 2022
+report
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-7-1.pdf}
+
+\hypertarget{statistical-tests}{%
+\subsection{Statistical tests}\label{statistical-tests}}
+
+\hypertarget{mpn}{%
+\paragraph{MPN}\label{mpn}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(mpn)
+##              Df Sum Sq Mean Sq F value    Pr(>F)    
+## sample_site   9 1229.0 136.553  89.038 < 2.2e-16 ***
+## Residuals   998 1530.6   1.534                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-8-1.pdf}
+
+\hypertarget{chlorophyll-a}{%
+\paragraph{Chlorophyll-a}\label{chlorophyll-a}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(chl_ug_l + 1e-05)
+##              Df Sum Sq Mean Sq F value    Pr(>F)    
+## sample_site   9  631.9  70.211  39.517 < 2.2e-16 ***
+## Residuals   934 1659.5   1.777                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-9-1.pdf}
+
+\hypertarget{dissolved-oxygen}{%
+\paragraph{Dissolved oxygen}\label{dissolved-oxygen}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(do_mg_l)
+##              Df Sum Sq Mean Sq F value    Pr(>F)    
+## sample_site   9 12.078 1.34203  39.099 < 2.2e-16 ***
+## Residuals   984 33.775 0.03432                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-10-1.pdf}
+
+\hypertarget{turbidity}{%
+\paragraph{Turbidity}\label{turbidity}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(turb_ntu)
+##              Df Sum Sq Mean Sq F value    Pr(>F)    
+## sample_site   9  93.73 10.4147  17.849 < 2.2e-16 ***
+## Residuals   983 573.57  0.5835                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-11-1.pdf}
+
+\hypertarget{salinity}{%
+\paragraph{Salinity}\label{salinity}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(salinity_ppt)
+##              Df Sum Sq Mean Sq F value    Pr(>F)    
+## sample_site   9 525.79  58.421  145.12 < 2.2e-16 ***
+## Residuals   985 396.55   0.403                      
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-12-1.pdf}
+
+\hypertarget{temperature}{%
+\paragraph{Temperature}\label{temperature}}
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(water_temp_c)
+##              Df  Sum Sq   Mean Sq F value Pr(>F)
+## sample_site   9  0.0538 0.0059795   0.391 0.9398
+## Residuals   985 15.0636 0.0152930
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-13-1.pdf}
+
+Regressions for MPN vs.~each environmental parameter
+
+\begin{verbatim}
+## Analysis of Variance Table
+## 
+## Response: log(mpn)
+##                        Df  Sum Sq Mean Sq  F value    Pr(>F)    
+## log(water_temp_c)       1   10.71   10.71   5.7571   0.01662 *  
+## log(salinity_ppt)       1  411.91  411.91 221.5161 < 2.2e-16 ***
+## log(turb_ntu)           1  162.93  162.93  87.6172 < 2.2e-16 ***
+## log(do_mg_l)            1  160.08  160.08  86.0883 < 2.2e-16 ***
+## log(chl_ug_l + 1e-05)   1   82.26   82.26  44.2379 4.941e-11 ***
+## Residuals             935 1738.66    1.86                       
+## ---
+## Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+\end{verbatim}
+
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-14-1.pdf}
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-14-2.pdf}
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-14-3.pdf}
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-14-4.pdf}
+\includegraphics{wq_analysis_files/figure-latex/unnamed-chunk-14-5.pdf}
+
+\hypertarget{appendix-summaries-of-each-site}{%
+\subsection{Appendix: summaries of each
+site}\label{appendix-summaries-of-each-site}}
+
+Percentage of exceedances Average MPN Annual and seasonal trends in MPN
+Average (and range?) environmental parameters
+
+\hypertarget{section}{%
+\subsection{}\label{section}}
+
+\end{document}
